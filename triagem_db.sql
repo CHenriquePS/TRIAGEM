@@ -1,0 +1,1 @@
+SELECT * FROM triagem_db.paciente;

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Triagem de Pacientes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ 
+  <a href="http://localhost:8080/swagger-ui.html" target="_blank" class="swagger-btn">Documentação da API</a>
+
+  <header>
+    <div class="container">
+      <h1>Triagem de Pacientes - Protocolo Manchester</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="form-section">
+      <h2>Adicionar Paciente</h2>
+      <form id="paciente-form">
+        <input type="text" id="nome" placeholder="Nome do Paciente" required>
+        <input type="number" id="idade" placeholder="Idade" required>
+        <input type="text" id="responsavel" placeholder="Nome do Responsável" required>
+        <input type="text" id="telefone" placeholder="Telefone" required>
+        <input type="text" id="endereco" placeholder="Endereço" required>
+        <select id="classificacao" required>
+          <option value="">Classificação de Risco</option>
+          <option value="Vermelho">🔴 Vermelho - Emergência</option>
+          <option value="Laranja">🟠 Laranja - Muito Urgente</option>
+          <option value="Amarelo">🟡 Amarelo - Urgente</option>
+          <option value="Verde">🟢 Verde - Pouco Urgente</option>
+          <option value="Azul">🔵 Azul - Não Urgente</option>
+        </select>
+        <button type="submit">Salvar</button>
+      </form>
+    </section>
+
+    <section class="pacientes-section">
+      <h2>Pacientes Cadastrados</h2>
+      <div id="pacientes-lista" class="cards"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
